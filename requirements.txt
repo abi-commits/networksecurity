@@ -2,6 +2,8 @@ python-dotenv
 pandas
 numpy
 pymongo
+pyaml
+dill
 certifi
 scikit-learn
 
