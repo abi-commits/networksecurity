@@ -6,5 +6,6 @@ pyaml
 dill
 certifi
 scikit-learn
+mlflow
 
 ##-e .
