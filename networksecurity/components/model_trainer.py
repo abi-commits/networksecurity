@@ -91,6 +91,7 @@ class ModelTrainer:
             preprocessor = load_object(file_path=self.data_transformaton_artifact.transformed_object_file_path)
             final_model = NetworkModel(preprocessor=preprocessor, model=best_model)
             save_object(self.model_trainer_config.trained_model_file_path, obj=final_model)
+            save_object("final_model/model.pkl",best_model)
 
             # Return artifact
             model_trainer_artifact = ModelTrainerArtifact(

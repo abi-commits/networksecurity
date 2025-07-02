@@ -1,0 +1,28 @@
+[2025-07-02 14:01:10,218] 27 root INFO - Pipeline execution started.
+[2025-07-02 14:01:10,219] 33 root INFO - Initializing Data Ingestion...
+[2025-07-02 14:01:14,391] 57 root INFO - Performed train test split on dataframe
+[2025-07-02 14:01:14,391] 62 root INFO - Creating train and test files 
+[2025-07-02 14:01:14,511] 69 root INFO - Train and test files created sucessfully
+[2025-07-02 14:01:14,511] 37 root INFO - Data Ingestion completed. Artifact: DataIngestionArtifact(train_file_path='Artifact/07022025140050/data_ingestion/ingested/train.csv', test_file_path='Artifact/07022025140050/data_ingestion/ingested/test.csv')
+[2025-07-02 14:01:14,511] 40 root INFO - Initializing Data Validation...
+[2025-07-02 14:01:14,892] 44 root INFO - Data Validation completed. Artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='Artifact/07022025140050/data_validation/valid/train.csv', valid_test_file_path='Artifact/07022025140050/data_validation/valid/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifact/07022025140050/data_validation/drift_report/report.yaml')
+[2025-07-02 14:01:14,892] 47 root INFO - Initializing Data Transformation...
+[2025-07-02 14:01:14,892] 51 root INFO - Starting data transformation process.
+[2025-07-02 14:01:14,907] 39 root INFO - Initializing KNN Imputer for data transformation
+[2025-07-02 14:01:14,907] 42 root INFO - Data transformation pipeline created successfully.
+[2025-07-02 14:01:14,915] 62 root INFO - Entering the save_object method
+[2025-07-02 14:01:14,916] 66 root INFO - Object saved at Artifact/07022025140050/data_transformation/transformed_object/preprocessing.pkl
+[2025-07-02 14:01:14,916] 62 root INFO - Entering the save_object method
+[2025-07-02 14:01:14,917] 66 root INFO - Object saved at final_model/preprocessor.pkl
+[2025-07-02 14:01:14,917] 51 root INFO - Data Transformation completed. Artifact: DataTransformationArtifact(transformed_object_file_path='Artifact/07022025140050/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='Artifact/07022025140050/data_transformation/transformed/train.npy', transformed_test_file_path='Artifact/07022025140050/data_transformation/transformed/test.npy')
+[2025-07-02 14:01:14,917] 54 root INFO - Initializing Model Trainer...
+[2025-07-02 14:01:14,917] 110 root INFO - Loading transformed train/test arrays...
+[2025-07-02 14:01:14,918] 38 root INFO - Starting model training and hyperparameter tuning...
+[2025-07-02 14:03:39,955] 73 root INFO - Best Model: Random Forest with score: 0.9670698468753671
+[2025-07-02 14:03:52,494] 62 root INFO - Entering the save_object method
+[2025-07-02 14:03:52,512] 66 root INFO - Object saved at Artifact/07022025140050/model_trainer/trained_model/model.pkl
+[2025-07-02 14:03:52,513] 62 root INFO - Entering the save_object method
+[2025-07-02 14:03:52,527] 66 root INFO - Object saved at final_model/model.pkl
+[2025-07-02 14:03:52,527] 103 root INFO - Model training complete. Artifact: ModelTrainerArtifact(trained_model_file_path='Artifact/07022025140050/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9926350245499181, precision_score=0.9926350245499181, recall_score=0.9926350245499181), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9926350245499181, precision_score=0.9926350245499181, recall_score=0.9926350245499181))
+[2025-07-02 14:03:52,528] 58 root INFO - Model Trainer completed. Artifact: ModelTrainerArtifact(trained_model_file_path='Artifact/07022025140050/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9926350245499181, precision_score=0.9926350245499181, recall_score=0.9926350245499181), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9926350245499181, precision_score=0.9926350245499181, recall_score=0.9926350245499181))
+[2025-07-02 14:03:52,528] 60 root INFO - Pipeline execution completed successfully.

@@ -7,5 +7,7 @@ dill
 certifi
 scikit-learn
 mlflow
+fastapi
+uvicorn
 
 ##-e .
